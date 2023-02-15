@@ -3,15 +3,18 @@ import { StyleSheet, Text, View } from 'react-native';
 import Header from './src/components/Header';
 
 export default function App() {
+  const tasks = ['Task 1', 'task 2', 'task 3', 'task 4', 'task 5', 'task 6'];
   return (
     <View style={styles.container}>
       <Header />
       <View>
-        <Text>Item 1</Text>
-        <Text>Item 2</Text>
-        <Text>Item 3</Text>
-        <Text>Item 4</Text>
-        <Text>Item 5</Text>
+      {tasks.map((task) => (
+        <Text>{task}</Text>
+      ))}
+      
+      
+      
+      
       </View>
       <StatusBar style="auto" />
     </View>
